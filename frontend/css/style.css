@@ -19,10 +19,19 @@ body {
 main {
     flex: 1;
     padding: 40px;
+
+    background: linear-gradient(
+        135deg,
+        #dff4ff 0%,
+        #d9e5ff 35%,
+        #eee0ff 65%,
+        #ffe5dc 100%
+    );
 }
 
 #mainFooter {
     margin-top: auto;
+    background-color: white;
 }
 
 .main-header {
@@ -31,6 +40,7 @@ main {
     justify-content: space-between;
     padding: 8px 40px;
     border-bottom: 1px solid #cccccc;
+    background-color: white;
 }
 
 .logo-link {
@@ -179,7 +189,7 @@ main {
 /* ===== LÁBLÉC ===== */
 
 .main-footer {
-    margin-top: 60px;
+    margin-top: 0;
     padding: 18px 40px;
     border-top: 1px solid #d9dee8;
 
