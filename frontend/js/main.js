@@ -22,8 +22,33 @@ function createNavItem(page, label) {
 
 if (mainNav) {
 
+    // REGISZTRÁCIÓS ÉS BEJELENTKEZÉSI OLDAL
+    if  (
+        currentPage === "regisztracio.html" ||
+        currentPage === "bejelentkezes.html" 
+    ) {
+
+        mainNav.innerHTML = `
+
+            ${createNavItem(
+                "index.html",
+                "Programok"
+            )}
+
+            ${createNavItem(
+                "bejelentkezes.html",
+                "Bejelentkezés"
+            )}
+
+            ${createNavItem(
+                "regisztracio.html",
+                "Regisztráció"
+            )}
+    `   ;
+    }
+
     // PROGRAMKERESŐ
-    if (
+    else if (
         savedUser &&
         savedUser.loggedIn &&
         savedUser.role === "PROGRAMKERESO"
