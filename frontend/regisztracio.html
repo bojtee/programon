@@ -25,12 +25,90 @@
 </header>
 
 <main>
-    <h1>Regisztráció</h1>
+    <section class="registration-card">
+
+        <h1>Regisztráció</h1>
+
+        <form id="registrationForm">
+
+            <div class="form-group">
+                <label for="name">Név</label>
+                <input type="text"
+                        id="name"
+                        minlength="2"
+                required>
+                <p id="nameError" class="form-error"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Felhasználónév</label>
+                <input type="text"
+                        id="username"
+                        minlength="3"
+                        maxlength="30"
+                    required>
+                <p id="usernameError" class="form-error"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail cím</label>
+                <input type="email" id="email" required>
+                <p id="emailError" class="form-error"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Jelszó</label>
+                <input type="password"
+                        id="password"
+                        minlength="8"
+                        required>
+                <p id="passwordFormatError" class="form-error"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="passwordAgain">Jelszó megerősítése</label>
+                <input type="password" id="passwordAgain" required>
+                <p id="passwordError" class="form-error"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="role">Szerepkör</label>
+
+                <select id="role" required>
+                    <option value="" selected disabled>
+                        Válassz szerepkört
+                    </option>
+                    <option value="PROGRAMKERESO">Programkereső</option>
+                    <option value="PROGRAMSZERVEZO">Programszervező</option>
+                </select>
+            </div>
+
+            <div class="terms-row">
+                <input type="checkbox" id="privacy" required>
+
+                <label for="privacy">
+                    Elfogadom az
+                    <button type="button"
+                            class="privacy-link"
+                            data-modal="privacyModal">
+                        adatkezelési tájékoztatót
+                    </button>.
+                </label>
+            </div>
+
+            <button type="submit" class="registration-button" disabled>
+                Regisztráció
+            </button>
+
+        </form>
+
+    </section>
 </main>
 
 <div id="mainFooter"></div>
 
 <script src="js/main.js"></script>
+<script src="js/registration.js"></script>
 
 </body>
 </html>

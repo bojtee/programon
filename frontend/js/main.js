@@ -359,7 +359,7 @@ const modalContent = document.getElementById("modalContent");
 const modalClose = document.getElementById("modalClose");
 
 const footerModalButtons = document.querySelectorAll(
-    ".footer-nav button[data-modal]"
+    "[data-modal]"
 );
 
 const footerModalData = {
