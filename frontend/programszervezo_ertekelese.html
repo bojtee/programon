@@ -25,13 +25,119 @@
 </header>
 
 <main>
-    <a href="jelentkezeseim.html" class="back-link">
-        ← Vissza a jelentkezéseimhez
-    </a>
+    <section class="rating-card">
 
-    <h1>Programszervező értékelése</h1>
+        <h1>Programszervező értékelése</h1>
 
-    <p>A programszervező értékelésére szolgáló felület itt jelenik majd meg.</p>
+        <p class="rating-intro">
+            A programon való részvétel után értékelheted a programszervezőt.
+        </p>
+
+        <div class="rating-info">
+
+            <p>
+                <strong>Program:</strong>
+                <span id="programTitle">Program címe</span>
+            </p>
+
+            <p>
+                <strong>Programszervező:</strong>
+                <span id="organizerName">Programszervező neve</span>
+            </p>
+
+        </div>
+
+        <div class="rating-field">
+
+            <p class="rating-label">
+                Értékelés *
+            </p>
+
+            <div class="stars" aria-label="Értékelés 1-től 5 csillagig">
+
+                <button type="button"
+                        class="star-button"
+                        data-value="1"
+                        aria-label="1 csillag">☆</button>
+
+                <button type="button"
+                        class="star-button"
+                        data-value="2"
+                        aria-label="2 csillag">☆</button>
+
+                <button type="button"
+                        class="star-button"
+                        data-value="3"
+                        aria-label="3 csillag">☆</button>
+
+                <button type="button"
+                        class="star-button"
+                        data-value="4"
+                        aria-label="4 csillag">☆</button>
+
+                <button type="button"
+                        class="star-button"
+                        data-value="5"
+                        aria-label="5 csillag">☆</button>
+
+            </div>
+
+            <p class="rating-help">
+                * Legalább 1 csillag kiválasztása kötelező.
+            </p>
+
+            <p class="form-error" id="ratingError">
+            </p>
+
+        </div>
+
+        <div class="rating-field">
+
+            <label class="rating-label" for="ratingComment">
+                Szöveges visszajelzés (opcionális)
+            </label>
+
+            <textarea
+                id="ratingComment"
+                maxlength="500"
+                placeholder="Visszajelzés szövege"
+            ></textarea>
+
+            <p class="rating-help">
+                A szöveges visszajelzés csak csillagos értékeléssel együtt
+                küldhető el.
+            </p>
+
+        </div>
+
+        <div class="rating-actions">
+
+            <button
+                type="button"
+                class="rating-button"
+                id="ratingBackButton">
+                Vissza
+            </button>
+
+            <button
+                type="button"
+                class="rating-button"
+                id="submitRatingButton"
+                disabled>
+                Értékelés elküldése
+            </button>
+
+        </div>
+
+        <p class="rating-note">
+            Max. 500 karakter. Az elküldött értékelés végleges, később nem módosítható.
+            Sikeres elküldés után az értékelés mentésre kerül, a rendszer
+            visszairányítja a felhasználót a Jelentkezéseim oldalra.
+            Az adott programhoz tartozó értékelés ezt követően nem küldhető be újra.
+        </p>
+
+    </section>
+
 </main>
 
 <div id="mainFooter"></div>

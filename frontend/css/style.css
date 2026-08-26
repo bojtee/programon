@@ -338,3 +338,134 @@ main {
     text-decoration: underline;
     cursor: pointer;
 }
+
+/* ===== PROGRAMSZERVEZŐ ÉRTÉKELÉSE ===== */
+
+.rating-card {
+    width: 100%;
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 32px;
+
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.rating-card h1 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #10275b;
+}
+
+.rating-intro {
+    margin-bottom: 24px;
+}
+
+.rating-info {
+    margin-bottom: 24px;
+}
+
+.rating-info p {
+    margin: 6px 0;
+}
+
+.rating-field {
+    margin-bottom: 24px;
+}
+
+.rating-label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #10275b;
+    font-weight: 600;
+}
+
+.stars {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.star-button {
+    border: none;
+    background: none;
+    padding: 0;
+
+    color: #10275b;
+
+    font-size: 36px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.star-button:hover {
+    color: #ff2b78;
+}
+
+.star-button.is-selected {
+    color: #ff2b78;
+}
+
+.rating-help {
+    margin: 6px 0 0;
+
+    color: #6b7280;
+    font-size: 14px;
+}
+
+#ratingComment {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px 12px;
+
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-family: inherit;
+
+    resize: vertical;
+}
+
+.rating-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    margin-top: 24px;
+}
+
+.rating-button {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #10275b;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.rating-button:hover {
+    background-color: #1b3d7a;
+}
+
+.rating-button:disabled {
+    background-color: #aab3c5;
+    cursor: not-allowed;
+}
+
+.rating-note {
+    margin-top: 24px;
+
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+}

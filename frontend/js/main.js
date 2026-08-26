@@ -461,3 +461,100 @@ document.addEventListener("keydown", function (event) {
         closeFooterModal();
     }
 });
+
+// ===== PROGRAMSZERVEZŐ ÉRTÉKELÉSE =====
+
+// Az értékelő oldal elemeinek megkeresése
+const ratingStars = document.querySelectorAll(".star-button");
+const submitRatingButton = document.getElementById("submitRatingButton");
+const ratingBackButton = document.getElementById("ratingBackButton");
+const ratingError = document.getElementById("ratingError");
+
+// A kiválasztott értékelés.
+// Kezdetben 0, mert még nincs kiválasztva csillag.
+let selectedRating = 0;
+
+
+// ===== CSILLAGOK KIVÁLASZTÁSA =====
+
+ratingStars.forEach(function (star) {
+
+    star.addEventListener("click", function () {
+
+        // Kiolvassuk, hányadik csillagra kattintott a felhasználó.
+        selectedRating = Number(star.dataset.value);
+
+        // Végigmegyünk mind az öt csillagon.
+        ratingStars.forEach(function (currentStar) {
+
+            const starValue = Number(currentStar.dataset.value);
+
+            // A kiválasztott értékig teli csillagokat jelenítünk meg.
+            currentStar.textContent =
+                starValue <= selectedRating ? "★" : "☆";
+
+            // A kiválasztott csillagok megkapják az is-selected osztályt.
+            currentStar.classList.toggle(
+                "is-selected",
+                starValue <= selectedRating
+            );
+
+        });
+
+        // Mivel már van legalább 1 csillag,
+        // engedélyezzük az elküldés gombot.
+        if (submitRatingButton) {
+            submitRatingButton.disabled = false;
+        }
+
+        // Ha korábban volt hibaüzenet, töröljük.
+        if (ratingError) {
+            ratingError.textContent = "";
+        }
+
+    });
+
+});
+
+
+// ===== VISSZA GOMB =====
+
+if (ratingBackButton) {
+
+    ratingBackButton.addEventListener("click", function () {
+
+        window.location.href = "jelentkezeseim.html";
+
+    });
+
+}
+
+
+// ===== ÉRTÉKELÉS ELKÜLDÉSE =====
+
+if (submitRatingButton) {
+
+    submitRatingButton.addEventListener("click", function () {
+
+        // Biztonsági ellenőrzés:
+        // legalább 1 csillag kiválasztása kötelező.
+        if (selectedRating === 0) {
+
+            if (ratingError) {
+                ratingError.textContent =
+                    "Legalább 1 csillag kiválasztása kötelező.";
+            }
+
+            return;
+        }
+
+        /*
+         * A tényleges adatbázisba mentést
+         * később a backend/API fogja elvégezni.
+         */
+
+        window.location.href = "jelentkezeseim.html";
+
+    });
+
+}
