@@ -469,3 +469,143 @@ main {
     font-size: 14px;
     line-height: 1.5;
 }
+
+/* ===== SAJÁT ÉRTÉKELÉSEIM ===== */
+
+.reviews-page {
+    width: 100%;
+    max-width: 850px;
+    margin: 20px auto;
+}
+
+.reviews-page h1 {
+    margin-bottom: 8px;
+    color: #10275b;
+}
+
+.reviews-intro {
+    margin-bottom: 24px;
+}
+
+.reviews-summary {
+    margin-bottom: 24px;
+    padding: 16px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.reviews-summary span {
+    margin: 0 10px;
+    color: #6b7280;
+}
+
+.reviews-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.reviews-filter label {
+    font-weight: 600;
+    color: #10275b;
+}
+
+.reviews-filter select {
+    min-width: 220px;
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 15px;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.review-card {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.review-header strong {
+    color: #ff2b78;
+}
+
+.review-header span {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.review-program {
+    margin-bottom: 10px;
+}
+
+.review-text {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.no-review-text {
+    color: #6b7280;
+    font-style: italic;
+}
+
+.reviews-note {
+    margin-top: 24px;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.reviews-empty {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    color: #6b7280;
+}
+
+.reviews-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    margin-top: 24px;
+}
+
+.reviews-pagination[hidden] {
+    display: none;
+}
+
+.pagination-button {
+    padding: 8px 14px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #10275b;
+    color: white;
+
+    cursor: pointer;
+}
+
+.pagination-info {
+    color: #10275b;
+    font-weight: 600;
+}

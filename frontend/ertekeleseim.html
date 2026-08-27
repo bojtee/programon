@@ -25,9 +25,113 @@
 </header>
 
 <main>
+    
+    <section class="reviews-page">
+    
     <h1>Értékeléseim</h1>
 
-    <p>A programszervezőként kapott értékelések itt jelennek majd meg.</p>
+    <p class="reviews-intro">
+            A Programkeresőktől kapott Programszervező-értékelések.
+        </p>
+
+        <div class="reviews-summary">
+            Átlagos értékelés:
+            <strong>★★★★☆ 4,3 / 5</strong>
+            <span>|</span>
+            <strong>12 értékelés</strong>
+        </div>
+
+        <div class="reviews-filter">
+            <label for="programFilter">
+                Program:
+            </label>
+
+            <select id="programFilter">
+                <option value="all">Összes</option>
+                <option value="1">Program címe</option>
+                <option value="2">Másik program címe</option>
+            </select>
+        </div>
+
+        <div class="reviews-list">
+
+            <article class="review-card">
+                <div class="review-header">
+                    <strong>★★★★★ 5 / 5</strong>
+                    <span>2026. 08. 15.</span>
+                </div>
+
+                <p class="review-program">
+                    <strong>Program:</strong> Program címe
+                </p>
+
+                <p class="review-text">
+                    „Nagyon jól szervezett program volt, minden információt
+                    időben megkaptunk.”
+                </p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-header">
+                    <strong>★★★★☆ 4 / 5</strong>
+                    <span>2026. 08. 12.</span>
+                </div>
+
+                <p class="review-program">
+                    <strong>Program:</strong> Program címe
+                </p>
+
+                <p class="review-text">
+                    „Hasznos program, jó helyszín és pontos kezdés.”
+                </p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-header">
+                    <strong>★★★★☆ 4 / 5</strong>
+                    <span>2026. 08. 08.</span>
+                </div>
+
+                <p class="review-program">
+                    <strong>Program:</strong> Program címe
+                </p>
+
+                <p class="review-text no-review-text">
+                    Nincs szöveges visszajelzés.
+                </p>
+            </article>
+
+        </div>
+
+        <nav class="reviews-pagination" aria-label="Értékelések lapozása" hidden>
+            <button type="button" 
+                    class="pagination-button"
+                    id="previousPageButton">
+                ← Előző
+            </button>
+
+            <span class="pagination-info" 
+                id="paginationInfo">
+                1 / 1 oldal
+            </span>
+
+            <button type="button"
+                    class="pagination-button"
+                    id="nextPageButton">
+                Következő →
+            </button>
+            
+        </nav>
+
+        <div class="reviews-empty" id="reviewsEmpty" hidden>
+            <p>Még nem érkezett értékelés.</p>
+        </div>
+
+        <p class="reviews-note">
+            Az értékelések csak megtekinthetők, nem módosíthatók és nem törölhetők.
+        </p>
+
+    </section>
 </main>
 
 <div id="mainFooter"></div>
