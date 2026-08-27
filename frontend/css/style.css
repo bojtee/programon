@@ -609,3 +609,278 @@ main {
     color: #10275b;
     font-weight: 600;
 }
+
+/* ===== KEDVENCEIM ===== */
+
+
+.favorites-container {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 20px auto;
+
+}
+
+
+.favorites-container h1 {
+
+    margin-top: 0;
+
+    margin-bottom: 8px;
+
+    color: #10275b;
+
+}
+
+
+.favorites-intro {
+
+    margin-top: 0;
+
+    margin-bottom: 24px;
+
+    color: #6b7280;
+
+}
+
+
+.favorites-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.favorite-card {
+
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    gap: 24px;
+
+
+    padding: 20px;
+
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+}
+
+
+.favorite-image {
+
+    min-height: 180px;
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    background-color: #f3f4f6;
+
+    border-radius: 8px;
+
+
+    color: #6b7280;
+
+    font-size: 32px;
+
+}
+
+
+.favorite-content {
+
+    min-width: 0;
+
+}
+
+
+.favorite-card-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+}
+
+
+.favorite-card-header h2 {
+
+    margin: 0;
+
+    color: #10275b;
+
+}
+
+
+.favorite-button {
+
+    border: none;
+
+    background: none;
+
+    padding: 0;
+
+
+    color: #ff2b78;
+
+
+    font: inherit;
+
+    font-weight: 600;
+
+
+    cursor: pointer;
+
+}
+
+
+.favorite-button:hover {
+
+    text-decoration: underline;
+
+}
+
+
+.favorite-description {
+
+    margin: 12px 0;
+
+}
+
+
+.favorite-details p {
+
+    margin: 5px 0;
+
+}
+
+
+.favorite-card-actions {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 16px;
+
+
+    margin-top: 18px;
+
+}
+
+
+.program-full {
+
+    padding: 6px 10px;
+
+
+    border-radius: 6px;
+
+
+    background-color: red;
+
+    color: black;
+
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.favorite-details-button {
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+
+    border-radius: 6px;
+
+
+    background-color: #10275b;
+
+    color: white;
+
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+.favorite-details-button:hover {
+
+    background-color: #1b3d7a;
+
+}
+
+
+.favorites-empty {
+
+    padding: 32px;
+
+    margin: 20px 0;
+
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+
+    text-align: center;
+
+    color: #6b7280;
+
+}
+
+
+@media (max-width: 700px) {
+
+
+    .favorite-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .favorite-image {
+
+        min-height: 160px;
+
+    }
+
+
+    .favorite-card-header {
+
+        flex-direction: column;
+
+    }
+
+}
